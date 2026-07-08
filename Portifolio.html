@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platinum Fit | Produtos e Serviços</title>
+    <meta name="description" content="Conheça os planos e modalidades oferecidos pela Platinum Fit.">
+
+    <link rel="icon" href="Emblema fitness metálico brilhante.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+    <img src="Emblema fitness metálico brilhante.png" alt="Logo Platinum Fit" class="logo">
+
+    <div class="titulo">
+        <h1>PLATINUM FIT</h1>
+        <p>Transformando esforço em resultados.</p>
+    </div>
+
+    <div style="width:90px;" aria-hidden="true"></div>
+
+</header>
+
+<nav class="menu-principal">
+
+    <button class="menu-toggle" aria-label="Abrir menu">☰ Menu</button>
+
+    <ul class="lista-menu">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="Portifolio.html">Produtos e Serviços</a></li>
+        <li><a href="Novidades.html">Novidades</a></li>
+        <li><a href="contato.html">Contato</a></li>
+    </ul>
+
+</nav>
+
+<main>
+
+    <section class="banner">
+        <h2>Produtos e Serviços</h2>
+        <p>
+            Escolha o plano ideal para o seu objetivo. Todos os planos incluem
+            acesso à estrutura completa da academia e acompanhamento da equipe
+            de educadores físicos.
+        </p>
+    </section>
+
+    <div class="centralizar" role="group" aria-label="Filtrar por categoria">
+        <button class="filtro-botao btn ativo" data-filtro="todos">Todos</button>
+        <button class="filtro-botao btn btn-secundario" data-filtro="plano">Planos</button>
+        <button class="filtro-botao btn btn-secundario" data-filtro="modalidade">Modalidades</button>
+        <button class="filtro-botao btn btn-secundario" data-filtro="extra">Serviços Extras</button>
+    </div>
+
+    <section class="grid-cards" aria-label="Lista de produtos e serviços">
+
+        <article class="card" data-categoria="plano">
+            <div class="card-conteudo">
+                <span class="badge">Plano</span>
+                <h4>Plano Mensal</h4>
+                <p>Ideal para quem quer experimentar a estrutura sem compromisso de longo prazo.</p>
+                <p class="preco">R$ 129,90/mês</p>
+                <ul>
+                    <li>Acesso à musculação</li>
+                    <li>1 avaliação física</li>
+                    <li>Horário livre</li>
+                </ul>
+                <a href="contato.html" class="btn">Quero este plano</a>
+            </div>
+        </article>
+
+        <article class="card" data-categoria="plano">
+            <div class="card-conteudo">
+                <span class="badge">Plano</span>
+                <h4>Plano Trimestral</h4>
+                <p>Melhor custo-benefício para quem quer manter a constância nos treinos.</p>
+                <p class="preco">R$ 109,90/mês</p>
+                <ul>
+                    <li>Acesso à musculação e funcional</li>
+                    <li>Avaliação física trimestral</li>
+                    <li>Aplicativo de treino</li>
+                </ul>
+                <a href="contato.html" class="btn">Quero este plano</a>
+            </div>
+        </article>
+
+        <article class="card" data-categoria="plano">
+            <div class="card-conteudo">
+                <span class="badge">Plano</span>
+                <h4>Plano Anual</h4>
+                <p>Para quem já decidiu fazer da Platinum Fit parte da rotina.</p>
+                <p class="preco">R$ 89,90/mês</p>
+                <ul>
+                    <li>Acesso total à estrutura</li>
+                    <li>Avaliações físicas mensais</li>
+                    <li>1 aula experimental de funcional grátis</li>
+                </ul>
+                <a href="contato.html" class="btn">Quero este plano</a>
+            </div>
+        </article>
+
+        <article class="card" data-categoria="modalidade">
+            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=600&q=80" alt="Área de musculação da academia">
+            <div class="card-conteudo">
+                <span class="badge">Modalidade</span>
+                <h4>Musculação</h4>
+                <p>Equipamentos modernos, espaço amplo e climatizado, com professores disponíveis o tempo todo.</p>
+            </div>
+        </article>
+
+        <article class="card" data-categoria="modalidade">
+            <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=600&q=80" alt="Aula de treinamento funcional em grupo">
+            <div class="card-conteudo">
+                <span class="badge">Modalidade</span>
+                <h4>Treinamento Funcional</h4>
+                <p>Aulas em grupo com foco em força, resistência, agilidade e queima calórica.</p>
+            </div>
+        </article>
+
+        <article class="card" data-categoria="modalidade">
+            <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=600&q=80" alt="Aula de alongamento e mobilidade">
+            <div class="card-conteudo">
+                <span class="badge">Modalidade</span>
+                <h4>Alongamento e Mobilidade</h4>
+                <p>Aulas voltadas para flexibilidade, postura e prevenção de lesões.</p>
+            </div>
+        </article>
+
+        <article class="card" data-categoria="extra">
+            <div class="card-conteudo">
+                <span class="badge">Serviço Extra</span>
+                <h4>Avaliação Física Completa</h4>
+                <p>Bioimpedância, medidas corporais e definição de metas com nossos profissionais.</p>
+                <p class="preco">R$ 49,90</p>
+                <a href="contato.html" class="btn">Agendar</a>
+            </div>
+        </article>
+
+        <article class="card" data-categoria="extra">
+            <div class="card-conteudo">
+                <span class="badge">Serviço Extra</span>
+                <h4>Personal Trainer</h4>
+                <p>Acompanhamento individualizado dentro da academia, com plano de treino exclusivo.</p>
+                <p class="preco">A partir de R$ 199,90/mês</p>
+                <a href="contato.html" class="btn">Saiba mais</a>
+            </div>
+        </article>
+
+    </section>
+
+    <section class="caixa">
+        <h3>Consulta de disponibilidade</h3>
+        <p>
+            Em breve, esta página contará com uma consulta em PHP integrada ao
+            nosso banco de dados, permitindo verificar em tempo real vagas por
+            horário e modalidade. Por enquanto, entre em contato com a nossa
+            equipe para verificar a disponibilidade de horários e turmas.
+        </p>
+        <div class="centralizar">
+            <a href="contato.html" class="btn">Falar com a equipe</a>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+
+    <h3>PLATINUM FIT</h3>
+    <p>Seu corpo. Sua evolução. Seu melhor resultado.</p>
+
+    <div class="redes-sociais">
+        <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+        <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
+        <a href="https://wa.me/5521999999999" target="_blank" rel="noopener" aria-label="WhatsApp">WA</a>
+    </div>
+
+    <br>
+    <p>© <span id="ano-atual">2026</span> Platinum Fit - Todos os direitos reservados.</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

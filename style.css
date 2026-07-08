@@ -1,0 +1,668 @@
+/* =========================================================
+   PLATINUM FIT — style.css
+   Folha de estilos externa (uso em todas as páginas do site)
+   ========================================================= */
+
+:root{
+    --preto:#111;
+    --preto-2:#000;
+    --cinza-escuro:#1f1f1f;
+    --cinza:#4d4d4d;
+    --cinza-medio:#777;
+    --cinza-claro:#a6a6a6;
+    --cinza-muitoclaro:#d9d9d9;
+    --branco:#fff;
+    --sombra:0 10px 20px rgba(0,0,0,.2);
+    --raio:15px;
+    --transicao:.3s ease;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:linear-gradient(135deg,#ffffff,#d9d9d9,#a6a6a6);
+    color:#222;
+    min-height:100vh;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+a{
+    color:inherit;
+}
+
+/* ===================== HEADER ===================== */
+
+header{
+    background:linear-gradient(to right,#000,#4d4d4d,#000);
+    color:white;
+    padding:20px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.4);
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.logo{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    border:3px solid white;
+    box-shadow:0 0 15px rgba(255,255,255,.3);
+    object-fit:cover;
+}
+
+.titulo{
+    text-align:center;
+    flex:1;
+}
+
+.titulo h1{
+    font-size:45px;
+    letter-spacing:4px;
+}
+
+.titulo p{
+    margin-top:5px;
+    font-size:18px;
+    color:#ddd;
+}
+
+/* ===================== NAVEGAÇÃO ===================== */
+
+nav.menu-principal{
+    background:#1f1f1f;
+    text-align:center;
+    padding:18px;
+    position:relative;
+}
+
+.menu-toggle{
+    display:none;
+    background:none;
+    border:2px solid white;
+    color:white;
+    font-size:22px;
+    padding:8px 14px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.lista-menu{
+    list-style:none;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:0;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    margin:0 15px;
+    padding:12px 25px;
+    border:2px solid #777;
+    border-radius:30px;
+    transition:var(--transicao);
+    font-weight:bold;
+    display:inline-block;
+}
+
+nav a:hover,
+nav a.ativo{
+    background:white;
+    color:black;
+}
+
+/* ===================== BANNER / HERO ===================== */
+
+.banner{
+    text-align:center;
+    padding:60px 20px;
+}
+
+.banner h2{
+    font-size:40px;
+    color:#111;
+    margin-bottom:20px;
+}
+
+.banner p{
+    width:75%;
+    margin:auto;
+    font-size:20px;
+    line-height:1.8;
+    color:#444;
+}
+
+.banner-imagem{
+    width:80%;
+    max-width:1000px;
+    margin:30px auto 0;
+    border-radius:var(--raio);
+    box-shadow:var(--sombra);
+    overflow:hidden;
+}
+
+.banner-imagem img{
+    width:100%;
+    height:380px;
+    object-fit:cover;
+}
+
+/* ===================== CAIXAS DE CONTEÚDO ===================== */
+
+.caixa{
+    width:80%;
+    margin:40px auto;
+    background:white;
+    padding:35px;
+    border-radius:var(--raio);
+    box-shadow:var(--sombra);
+}
+
+.caixa h3{
+    text-align:center;
+    margin-bottom:20px;
+    font-size:30px;
+    color:#222;
+}
+
+.caixa p{
+    text-align:justify;
+    line-height:1.8;
+    font-size:18px;
+}
+
+.caixa + .caixa{
+    margin-top:0;
+}
+
+/* ===================== GRID DE CARDS (genérico) ===================== */
+
+.grid-cards{
+    width:80%;
+    margin:40px auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:white;
+    border-radius:var(--raio);
+    box-shadow:var(--sombra);
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    transition:transform var(--transicao), box-shadow var(--transicao);
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 30px rgba(0,0,0,.3);
+}
+
+.card img{
+    width:100%;
+    height:190px;
+    object-fit:cover;
+}
+
+.card-conteudo{
+    padding:22px;
+    display:flex;
+    flex-direction:column;
+    flex:1;
+}
+
+.card-conteudo h4{
+    font-size:22px;
+    margin-bottom:10px;
+    color:#111;
+}
+
+.card-conteudo p{
+    font-size:16px;
+    line-height:1.6;
+    color:#444;
+    flex:1;
+}
+
+.card-conteudo .preco{
+    font-size:26px;
+    font-weight:bold;
+    color:#000;
+    margin:12px 0;
+}
+
+.card-conteudo ul{
+    margin:10px 0 15px 20px;
+    font-size:15px;
+    color:#333;
+    line-height:1.8;
+}
+
+.badge{
+    display:inline-block;
+    background:var(--preto);
+    color:white;
+    font-size:12px;
+    font-weight:bold;
+    letter-spacing:1px;
+    padding:5px 12px;
+    border-radius:20px;
+    margin-bottom:10px;
+    align-self:flex-start;
+}
+
+.btn{
+    display:inline-block;
+    background:var(--preto);
+    color:white;
+    border:2px solid var(--preto);
+    padding:12px 28px;
+    border-radius:30px;
+    font-weight:bold;
+    text-decoration:none;
+    cursor:pointer;
+    transition:var(--transicao);
+    font-size:16px;
+    text-align:center;
+}
+
+.btn:hover{
+    background:white;
+    color:var(--preto);
+}
+
+.btn-secundario{
+    background:transparent;
+    color:var(--preto);
+}
+
+.btn-secundario:hover{
+    background:var(--preto);
+    color:white;
+}
+
+.centralizar{
+    text-align:center;
+    margin:35px 0;
+}
+
+/* ===================== PÁGINA SOBRE ===================== */
+
+.linha-do-tempo{
+    width:80%;
+    margin:40px auto;
+    border-left:4px solid var(--preto);
+    padding-left:30px;
+}
+
+.evento-tempo{
+    position:relative;
+    margin-bottom:35px;
+}
+
+.evento-tempo::before{
+    content:"";
+    position:absolute;
+    left:-38px;
+    top:5px;
+    width:16px;
+    height:16px;
+    background:var(--preto);
+    border-radius:50%;
+    border:3px solid white;
+    box-shadow:0 0 0 2px var(--preto);
+}
+
+.evento-tempo h4{
+    font-size:20px;
+    color:#111;
+    margin-bottom:6px;
+}
+
+.evento-tempo span{
+    display:block;
+    font-weight:bold;
+    color:#666;
+    margin-bottom:6px;
+}
+
+.duas-colunas{
+    width:80%;
+    margin:40px auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+    align-items:center;
+}
+
+.duas-colunas img{
+    border-radius:var(--raio);
+    box-shadow:var(--sombra);
+    width:100%;
+    height:320px;
+    object-fit:cover;
+}
+
+/* ===================== NOVIDADES ===================== */
+
+.artigo-data{
+    font-size:14px;
+    color:#777;
+    font-weight:bold;
+    margin-bottom:8px;
+    text-transform:uppercase;
+}
+
+.leia-mais-texto{
+    display:none;
+}
+
+.leia-mais-texto.aberto{
+    display:block;
+    margin-top:10px;
+}
+
+.link-leia-mais{
+    background:none;
+    border:none;
+    color:var(--preto);
+    font-weight:bold;
+    text-decoration:underline;
+    cursor:pointer;
+    padding:0;
+    font-size:15px;
+    align-self:flex-start;
+    margin-top:auto;
+}
+
+/* ===================== CONTATO ===================== */
+
+.contato-wrapper{
+    width:80%;
+    margin:40px auto;
+    display:grid;
+    grid-template-columns:1.2fr .8fr;
+    gap:30px;
+}
+
+.form-contato{
+    background:white;
+    padding:35px;
+    border-radius:var(--raio);
+    box-shadow:var(--sombra);
+}
+
+.campo{
+    margin-bottom:20px;
+}
+
+.campo label{
+    display:block;
+    font-weight:bold;
+    margin-bottom:8px;
+    color:#222;
+}
+
+.campo input,
+.campo textarea,
+.campo select{
+    width:100%;
+    padding:12px 14px;
+    border:2px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
+    font-family:inherit;
+    transition:border var(--transicao);
+}
+
+.campo input:focus,
+.campo textarea:focus,
+.campo select:focus{
+    outline:none;
+    border-color:var(--preto);
+}
+
+.campo textarea{
+    resize:vertical;
+    min-height:120px;
+}
+
+.campo.erro input,
+.campo.erro textarea,
+.campo.erro select{
+    border-color:#c0392b;
+}
+
+.mensagem-erro{
+    color:#c0392b;
+    font-size:14px;
+    margin-top:6px;
+    display:none;
+    font-weight:bold;
+}
+
+.campo.erro .mensagem-erro{
+    display:block;
+}
+
+.mensagem-sucesso{
+    display:none;
+    background:#e6f7e9;
+    border:2px solid #2e7d32;
+    color:#1b5e20;
+    padding:16px 20px;
+    border-radius:10px;
+    margin-bottom:20px;
+    font-weight:bold;
+}
+
+.mensagem-sucesso.mostrar{
+    display:block;
+}
+
+.info-contato{
+    background:var(--preto);
+    color:white;
+    padding:35px;
+    border-radius:var(--raio);
+    box-shadow:var(--sombra);
+    display:flex;
+    flex-direction:column;
+    gap:22px;
+}
+
+.info-contato h3{
+    font-size:24px;
+    letter-spacing:1px;
+    border-bottom:2px solid #555;
+    padding-bottom:14px;
+}
+
+.info-item{
+    display:flex;
+    gap:12px;
+    align-items:flex-start;
+    font-size:16px;
+    line-height:1.6;
+}
+
+.info-item strong{
+    display:block;
+    margin-bottom:3px;
+}
+
+.redes-sociais{
+    display:flex;
+    gap:14px;
+    margin-top:10px;
+    flex-wrap:wrap;
+}
+
+.redes-sociais a{
+    border:2px solid #666;
+    border-radius:50%;
+    width:46px;
+    height:46px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    transition:var(--transicao);
+}
+
+.redes-sociais a:hover{
+    background:white;
+    color:black;
+    border-color:white;
+}
+
+.parceiros{
+    width:80%;
+    margin:10px auto 50px;
+    text-align:center;
+}
+
+.parceiros h3{
+    margin-bottom:25px;
+    font-size:26px;
+}
+
+.lista-parceiros{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:35px;
+}
+
+.lista-parceiros a{
+    background:white;
+    padding:18px 30px;
+    border-radius:10px;
+    box-shadow:var(--sombra);
+    text-decoration:none;
+    font-weight:bold;
+    color:#222;
+    transition:var(--transicao);
+}
+
+.lista-parceiros a:hover{
+    background:var(--preto);
+    color:white;
+}
+
+/* ===================== FOOTER ===================== */
+
+footer{
+    margin-top:50px;
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:35px 20px 25px;
+}
+
+footer .redes-sociais{
+    justify-content:center;
+    margin:18px auto;
+}
+
+/* ===================== RESPONSIVO ===================== */
+
+@media (max-width:900px){
+
+    .duas-colunas{
+        grid-template-columns:1fr;
+    }
+
+    .contato-wrapper{
+        grid-template-columns:1fr;
+    }
+}
+
+@media (max-width:768px){
+
+    header{
+        flex-direction:column;
+        text-align:center;
+        padding:20px;
+    }
+
+    .titulo h1{
+        font-size:32px;
+    }
+
+    .menu-toggle{
+        display:inline-block;
+        margin:0 auto;
+    }
+
+    .lista-menu{
+        display:none;
+        flex-direction:column;
+        gap:10px;
+        margin-top:15px;
+    }
+
+    .lista-menu.aberto{
+        display:flex;
+    }
+
+    nav a{
+        margin:0;
+        display:block;
+    }
+
+    .banner h2{
+        font-size:28px;
+    }
+
+    .banner p{
+        width:95%;
+        font-size:17px;
+    }
+
+    .caixa, .grid-cards, .linha-do-tempo, .duas-colunas, .contato-wrapper, .parceiros{
+        width:92%;
+    }
+}
+
+@media (max-width:480px){
+
+    .titulo h1{
+        font-size:26px;
+        letter-spacing:2px;
+    }
+
+    .logo{
+        width:70px;
+        height:70px;
+    }
+
+    .caixa{
+        padding:22px;
+    }
+
+    .card-conteudo h4{
+        font-size:19px;
+    }
+}
