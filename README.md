@@ -1,2 +1,2 @@
-# Academia
+# Platinum Fit
 Academia
